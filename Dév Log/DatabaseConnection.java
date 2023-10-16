@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
@@ -14,7 +15,8 @@ public class DatabaseConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        
+        return connection;
+    }       
        
 
         public static void insertDemandeur(Demandeur demandeur) {
@@ -39,7 +41,8 @@ public class DatabaseConnection {
                         e.printStackTrace();
                     }
                 }
-            }
+                }
+            
 
             public static void insertValideur(Valideur valideur) {
                 Connection connection = getConnection();
@@ -63,7 +66,8 @@ public class DatabaseConnection {
                         e.printStackTrace();
                     }
                 }
-            }
+                }
+            
 
             public static void insertBenevole(Benevole benevole) {
                 Connection connection = getConnection();
@@ -87,10 +91,10 @@ public class DatabaseConnection {
                         e.printStackTrace();
                     }
                 }
-            }
-
             
 
-        return connection;
+       
+
+        
     }
 }
