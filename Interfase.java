@@ -47,7 +47,7 @@ public class Interfase extends JFrame {
                 String id = champId.getText();
 
                 if (validerUtilisateur(user, new String(password), id)) {
-                    // Redirection vers une page (simulée ici avec une fenêtre d'information)
+                    //
                     JOptionPane.showMessageDialog(null, "Authentification réussie. Redirection vers la page...");
                 } else {
                     // Afficher un message d'erreur
@@ -71,16 +71,40 @@ public class Interfase extends JFrame {
         setVisible(true);
     }
 
-    private boolean validerUtilisateur(String user, String password, String id) {
+    //private boolean validerUtilisateur(String user, String password, String id) {
         // Ici, vous devriez effectuer la validation dans votre base de données
         // Dans cet exemple, nous supposerons que les données sont correctes si user="user", password="password" et id="123"
 
-        if (user.equals("user") && password.equals("password") && id.equals("123")) {
-            return true;
-        } else {
+       // if (user.equals("user") && password.equals("password") && id.equals("123")) {
+          //  return true;
+      //  } else {
+         //   return false;
+     //   }
+   // }
+   
+    private boolean validerUtilisateur(String user, String password, String id) {
+        // Configure la connexion de la BBDD 
+        String url = "jdbc:mysql://localhost:3306/projet_gei_20";
+        String usuarioBD = "projet_gei_20";
+        String contrasenaBD = "Ahlah6ug ";
+
+        try (Connection connection = DriverManager.getConnection(url, usuarioBD, contrasenaBD)) {
+            //Requête SQL pour vérifier les informations d'identification
+            String sql = "SELECT * FROM usuarios WHERE nombre_usuario = ? AND contrasena = ? AND identificador = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, user);
+            preparedStatement.setString(2, password);
+            preparedStatement.setString(3, id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // S´il y a un résultat, les informations d'identification sont valides. 
+            return resultSet.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
             return false;
+        } 
         }
-    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
