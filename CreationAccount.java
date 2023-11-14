@@ -29,7 +29,7 @@ public class CreationAccount extends JFrame {
         campoPassword = new JPasswordField();
         campoIdentificador = new JTextField();
 
-        String[] tiposPersona = {"Valideur", "Demander", "Benevoler"};
+        String[] tiposPersona = {"Valideur", "Demandeur", "Benevole"};
         comboTipoPersona = new JComboBox<>(tiposPersona);
 
         botonCrearUsuario = new JButton("Creer utilisateur");
@@ -46,7 +46,7 @@ public class CreationAccount extends JFrame {
                 if (guardarUsuarioEnBD(usuario, password, identificador, tipoPersona)) {
                     JOptionPane.showMessageDialog(null, "Usuario creado con éxito.");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Error al crear el usuario.");
+                    JOptionPane.showMessageDialog(null, "Erreur lors de la creation de l'utilisateur.");
                 }
             }
         });
@@ -68,8 +68,8 @@ public class CreationAccount extends JFrame {
     // Método para guardar los datos en la base de datos (debes implementar esta lógica)
     private boolean guardarUsuarioEnBD(String usuario, String password, String identificador, int tipoPersona) {
         String servidor = "srv-bdens.insa-toulouse.fr:3306";
-        String baseDeDatos = "projet_gei_20";
-        String usuarioBD = "projet_gei_20";
+        String baseDeDatos = "projet_gei_020";
+        String usuarioBD = "projet_gei_020";
         String contrasenaBD = "Ahlah6ug";
         String url = "jdbc:mysql://" + servidor + "/" + baseDeDatos;
 
