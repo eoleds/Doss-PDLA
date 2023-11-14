@@ -107,7 +107,7 @@ public class Interfase extends JFrame {
         }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
+        SwingUt-> pour les test, ya 2 tutos moodle qu'on a pas fait, test unit tout ça, ça pourrait servir !ilities.invokeLater(new Runnable() {
             public void run() {
                 new Interfase();
             }
@@ -119,3 +119,4 @@ public class Interfase extends JFrame {
 //Vous devez remplacer cette méthode par une connexion réelle à votre base de données et effectuer la vérification des données. 
 //Si les données sont correctes, vous pouvez rediriger l'utilisateur vers la page souhaitée. Si les données sont incorrectes, un message d'erreur est affiché.
 //N'oubliez pas de configurer correctement votre base de données dans votre application
+//ah
