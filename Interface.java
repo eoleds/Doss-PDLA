@@ -1,4 +1,4 @@
-package demoMavenProject;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,13 +9,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Interfase extends JFrame {
+public class Interface extends JFrame {
     private JTextField champUser;
     private JPasswordField champPassword;
     private JTextField champId;
     private JLabel messageErreur;
 
-    public Interfase() {
+    public Interface() {
         // Configuration de la fenêtre
         setTitle("Formulaire d'Utilisateur");
         setSize(300, 200);
@@ -71,21 +71,10 @@ public class Interfase extends JFrame {
         setVisible(true);
     }
 
-    //private boolean validerUtilisateur(String user, String password, String id) {
-        // Ici, vous devriez effectuer la validation dans votre base de données
-        // Dans cet exemple, nous supposerons que les données sont correctes si user="user", password="password" et id="123"
-
-       // if (user.equals("user") && password.equals("password") && id.equals("123")) {
-          //  return true;
-      //  } else {
-         //   return false;
-     //   }
-   // }
-   
     private boolean validerUtilisateur(String user, String password, String id) {
         // Configure la connexion de la BBDD 
-        String url = "jdbc:mysql://localhost:3306/projet_gei_20";
-        String usuarioBD = "projet_gei_20";
+        String url = "jdbc:mysql://localhost:3306/projet_gei_020";
+        String usuarioBD = "projet_gei_020";
         String contrasenaBD = "Ahlah6ug ";
 
         try (Connection connection = DriverManager.getConnection(url, usuarioBD, contrasenaBD)) {
@@ -107,9 +96,9 @@ public class Interfase extends JFrame {
         }
 
     public static void main(String[] args) {
-        SwingUt-> pour les test, ya 2 tutos moodle qu'on a pas fait, test unit tout ça, ça pourrait servir !ilities.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new Interfase();
+                new Interface();
             }
         });
     }

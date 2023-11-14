@@ -1,5 +1,3 @@
-package demoMavenProject;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,15 +15,15 @@ public class CreationAccount extends JFrame {
     private JButton botonCrearUsuario;
 
     public CreationAccount() {
-        setTitle("Creación de Cuenta de Usuario");
+        setTitle("Creation du compte utilisateur");
         setSize(400, 250);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(6, 2));
 
-        JLabel etiquetaUsuario = new JLabel("Nombre de Usuario:");
-        JLabel etiquetaPassword = new JLabel("Contraseña:");
-        JLabel etiquetaIdentificador = new JLabel("Identificador:");
-        JLabel etiquetaTipoPersona = new JLabel("Tipo de Persona:");
+        JLabel etiquetaUsuario = new JLabel("Nom de l'utilisateur:");
+        JLabel etiquetaPassword = new JLabel("Mot de passe:");
+        JLabel etiquetaIdentificador = new JLabel("Identifiant:");
+        JLabel etiquetaTipoPersona = new JLabel("Profil utilisateur:");
 
         campoUsuario = new JTextField();
         campoPassword = new JPasswordField();
@@ -34,7 +32,7 @@ public class CreationAccount extends JFrame {
         String[] tiposPersona = {"Valideur", "Demander", "Benevoler"};
         comboTipoPersona = new JComboBox<>(tiposPersona);
 
-        botonCrearUsuario = new JButton("Crear Usuario");
+        botonCrearUsuario = new JButton("Creer utilisateur");
 
         botonCrearUsuario.addActionListener(new ActionListener() {
             @Override
