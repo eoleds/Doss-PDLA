@@ -1,3 +1,4 @@
+package Interfaces;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,13 +10,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Interface extends JFrame {
+public class Connexion extends JFrame {
     private JTextField champUser;
     private JPasswordField champPassword;
     private JTextField champId;
     private JLabel messageErreur;
 
-    public Interface() {
+    public Connexion() {
         // Configuration de la fenêtre
         setTitle("Formulaire d'Utilisateur");
         setSize(300, 200);
@@ -98,7 +99,7 @@ public class Interface extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new Interface();
+                new Connexion();
             }
         });
     }

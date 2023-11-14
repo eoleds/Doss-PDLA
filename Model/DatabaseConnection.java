@@ -3,6 +3,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import utilisateurs.Benevole;
+import utilisateurs.Demandeur;
+import utilisateurs.Valideur;
+import utilisateurs.Utilisateur;
+
 public class DatabaseConnection {
     public static Connection getConnection() {
         String url = "jdbc:mysql://srv-bdens.insa-toulouse.fr:3306/projet_gei_020";
