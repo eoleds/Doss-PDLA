@@ -1,13 +1,13 @@
 import java.util.*;
 
 
-public class Table {
-private List<Utilisateur> utilisateurs;
-private List<Demande> demandes;
-private List<Proposition> propositions;
+public class TableDemProp {
+	private List<Utilisateur> utilisateurs;
+	private List<Demande> demandes;	
+	private List<Proposition> propositions;
 
 
-public Table() {
+public TableDemProp() {
 utilisateurs = new ArrayList<>();
 demandes = new ArrayList<>();
 propositions = new ArrayList<>();

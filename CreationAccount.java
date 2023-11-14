@@ -42,7 +42,7 @@ public class CreationAccount extends JFrame {
                 String identificador = campoIdentificador.getText();
                 int tipoPersona = comboTipoPersona.getSelectedIndex() + 1; // Convertir el índice del JComboBox a 1, 2 o 3
 
-                // Llama a un método para guardar los datos en la base de datos (debes implementar esta lógica)
+                // Llama a un método para guardar los datos en la base de datoaucun de ses répertoires parents (jusqu'au points (debes implementar esta lógica)
                 if (guardarUsuarioEnBD(usuario, password, identificador, tipoPersona)) {
                     JOptionPane.showMessageDialog(null, "Usuario creado con éxito.");
                 } else {
