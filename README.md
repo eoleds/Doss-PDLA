@@ -1,14 +1,21 @@
 # DossPDLA
-quoicoubaka
 
-dans le doc databaseconnection ya une fonction insert qui a pour but d'insérer des instances dans les tables :
--table_demandeur
--table_valideur
--table_benevole
+A faire :
 
-il faut les créer :)
+- ajouter les attributs dans la classe mission ( utilisateur, date, lieu ...)
+- tests (creation d'un user, connexion à la bdd, ajout d'une mission..)
 
-ensuite ça serait cool de faire un test de création d'instance ( benevole par exemple)
-et de tester si il a été introduit dans la bdd
+interfaces :
+-dans les interfaces, recupérer les elements écrits par l'utilisateurs pour les passer en arguments dans les fonstions d'insertion sql
 
--> pour les test, ya 2 tutos moodle qu'on a pas fait, test unit tout ça, ça pourrait servir !
+sql :
+- les méthodes (dans des classes java) pour l'insertion (sql) des données dans la base de donnée de manière automatisée (dans une classe requetes.java par ex)
+-rajouter id dans la table user
+-ajouter le mot de passe 
+
+en dernier :
+- les autres interfaces de connexion
+-rendre les interfaces plus jolies
+
+A savoir :
+-id unique créé automatiquement
